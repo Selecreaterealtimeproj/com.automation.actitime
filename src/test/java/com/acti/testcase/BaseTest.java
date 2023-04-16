@@ -35,6 +35,7 @@ public class BaseTest extends DriverManager{
 	@AfterMethod
 	public void tearDown()
 	{
+		report.flush();
 		quitBrowser();
 
 	}
