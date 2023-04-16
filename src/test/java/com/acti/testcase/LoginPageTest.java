@@ -23,7 +23,7 @@ public class LoginPageTest extends BaseTest
 	@Test(priority = 2)
 	public void T2_ActiLogoDisplayed()
 	{
-		logger = report.createTest("logger Logo Image displayed")
+		logger = report.createTest("logger Logo Image displayed");
 		boolean flag = lp.actImgdis();
 		System.out.println("The image is displayed  " + flag);
 		Assert.assertTrue(flag);
@@ -33,7 +33,7 @@ public class LoginPageTest extends BaseTest
 	@Test(priority = 3)
 	public void T3_testActiLinkDisplayes()
 	{
-		logger = report.createTest("logger Logo Acti link displayed")
+		logger = report.createTest("logger Logo Acti link displayed");
 
 		boolean flag = lp.actlinkdis();
 		System.out.println("The test link is displayed  " + flag);
@@ -45,7 +45,7 @@ public class LoginPageTest extends BaseTest
 	@Test(priority = 4,enabled = false)
 	public void T4_testLoginFunction()
 	{
-		logger.create("Test Login Function");
+		logger = report.createTest("Test Login Function");
 	
 		lp.enterUsername("admin");
 		logger.pass("Entered username");
