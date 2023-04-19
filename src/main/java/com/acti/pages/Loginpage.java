@@ -13,8 +13,8 @@ public class Loginpage  extends DriverManager{
 	
 	@FindBy(xpath = "//div[text()='Login ']") WebElement loginbut;
 	
-	@FindBy(xpath = "//div[@class='atLogoImg']") WebElement actimg;
-	@FindBy(xpath = "//a[contains(text(),'actiTIME Inc')]") WebElement actlink;
+	@FindBy(xpath = "//div[@class='atLogoI']") WebElement actimg;
+	@FindBy(xpath = "//a[contains(text(),'actiTIME')]") WebElement actlink;
 	
 	//*******************Page Initialization**************************
 	

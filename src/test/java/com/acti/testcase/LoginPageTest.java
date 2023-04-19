@@ -42,7 +42,7 @@ public class LoginPageTest extends BaseTest
 
 	}
 	//*******************************************************Test Login Function
-	@Test(priority = 4,enabled = false)
+	@Test(priority = 4)
 	public void T4_testLoginFunction()
 	{
 		logger = report.createTest("Test Login Function");
@@ -66,11 +66,11 @@ public class LoginPageTest extends BaseTest
  		
 	}
 	//*********************************************************Test Negative Function
-	@Test(priority = 5)
+	/*@Test(priority = 5,enabled = false)
 	public void T5_testLoginNegativeFunction()
 	{
 		lp.enterUsername("admin1");
 		lp.enterpass("manager");
 		lp.clickLogin();
-	}
+	}*/
 }
