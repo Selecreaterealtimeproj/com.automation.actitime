@@ -40,7 +40,7 @@ public class DriverManager {
 		}
 		
 	}
-	//@Test
+	@Test
 	public  void  initApplication()
 	{
 		String browser = prop.getProperty("browser");

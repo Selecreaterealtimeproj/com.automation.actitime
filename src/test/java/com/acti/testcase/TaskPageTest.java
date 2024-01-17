@@ -1,13 +1,11 @@
 package com.acti.testcase;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 public class TaskPageTest extends BaseTest {
 		
 		
-		@Test(priority = 1, dataProvider = "actidata")
+		@Test(priority = 1, dataProvider = "actidata",enabled = false)
 		public void addNewCustomer(String username,String password)
 		{
 			logger = report.createTest("Test create new Username");
@@ -46,7 +44,7 @@ public class TaskPageTest extends BaseTest {
 
 			
 		}
-		@Test(priority = 2, dataProvider = "actidata")
+		@Test(priority = 2, dataProvider = "actidata",enabled = true)
 		public void deletecustomer(String username,String password) throws InterruptedException
 		
 		{
@@ -63,7 +61,7 @@ public class TaskPageTest extends BaseTest {
 			
 			etp.clickTask();
 			logger.pass("task clicked");
-			tlp.custNameTextbox("Nalini1");
+			tlp.custNameTextbox("Big Bang Company");
 			logger.pass("customer name is selected");
 			tlp.selCustName();
 			logger.pass("customer name is typed");
@@ -72,6 +70,7 @@ public class TaskPageTest extends BaseTest {
 			Thread.sleep(1000);
 			tlp.actionBut();
 			logger.pass("action button is clicked");
+			
 			tlp.delBut();
 			logger.pass("delete button is clicked");
 			tlp.delPer_But();
@@ -83,6 +82,36 @@ public class TaskPageTest extends BaseTest {
 			quitBrowser();
 			logger.pass("browser exit  customer deleted");
 
+			
+		}
+		@Test(dataProvider = "actidata",enabled=false)
+		public void taskProjectselect(String username,String password)
+		{
+			logger = report.createTest("Select the Project");
+			
+			lp.enterUsername(username);
+			logger.pass("User name Entered");
+			lp.enterpass(password);
+			logger.pass("Password Entered");
+			lp.clickLogin();
+			logger.pass(" Login in clicked");
+			logger.pass("Successful login");
+			etp.clickTask();
+			logger.pass("task clicked");
+			tlp.custNameTextbox("Big Bang Company");
+			logger.pass("customer name is selected");
+			tlp.selCustName();
+			logger.pass("customer name is clicked");
+			tlp.checkclick();
+			logger.pass("clicked the check box");
+			tlp.del_click();
+			//logger.pass("customer name is typed");
+			//tlp.custNameClick();
+
+			
+		}
+		public void addCustomerCancel()
+		{
 			
 		}
 		

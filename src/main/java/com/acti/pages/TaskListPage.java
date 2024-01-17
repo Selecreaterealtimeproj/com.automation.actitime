@@ -20,6 +20,7 @@ public class TaskListPage extends EnterTimePage{
 	@FindBy(xpath = "//div[@class='itemRow cpItemRow '][2]") WebElement option_combo;
 	@FindBy(xpath = "//div[contains(text(),'Create Customer')]") WebElement newCust_but;
 	@FindBy(xpath = "//span[@class='innerHtml")  WebElement successmsgText;
+	@FindBy(xpath = "//div[@class='greyButton cancelBtn']") WebElement addcustomercancel;
 	//***********************Web Element for Delete customer********************************
 	@FindBy(xpath = "(//div[@class='cellWrapper']//input)[1]" ) WebElement custname_textbox;
 	@FindBy(xpath = "/html/body/div[18]/div[1]/div[1]/div[2]/div/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[1]/span" ) WebElement selectcustname;
@@ -29,7 +30,9 @@ public class TaskListPage extends EnterTimePage{
 	@FindBy(xpath = "(//div[text()='ACTIONS'])[1]") WebElement Actionbut_click;
 	@FindBy(xpath = "(//div[@class='deleteButton']/div)[1]") WebElement del_but;
 	@FindBy(xpath = "//span[text() ='Delete permanently']") WebElement delper_but;
-
+	//**************************************Task Project selection******************************************************
+	@FindBy(xpath = "(//td[@class= 'selection']/div)[1]") WebElement checkbox_click;
+	@FindBy(xpath = "//div[@class = 'delete button']") WebElement del_click;
 	
 
 	public  TaskListPage()
@@ -106,10 +109,22 @@ public class TaskListPage extends EnterTimePage{
 		delper_but.click();
 	}
 	
+	//*******************************************task selection**********************************************
+	public void checkclick()
 	
-	
-	
-	
+	{
+		if(!checkbox_click.isSelected())
+			{checkbox_click.click();}
+	}
+	public void del_click()
+	{
+		del_click.click();
+		
+	}
+	public void taskPageAddCustomerCancel()
+	{
+		addcustomercancel.click();
+	}
 	
 	
 

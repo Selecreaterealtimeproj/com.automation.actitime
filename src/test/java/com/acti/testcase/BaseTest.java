@@ -31,7 +31,8 @@ public class BaseTest extends DriverManager{
 	@BeforeSuite
 	public void setUpReport()
 	{
-		 extent = new ExtentHtmlReporter("./reports/actiindex.html");
+	 
+		 extent = new ExtentHtmlReporter("./reports/actitimeindex.html");
 		 report  = new ExtentReports();
 		report.attachReporter(extent);
 	}
@@ -59,7 +60,7 @@ public class BaseTest extends DriverManager{
 			}
 			
 			
-		}
+		} 
 		report.flush();
 		//quitBrowser();
 
